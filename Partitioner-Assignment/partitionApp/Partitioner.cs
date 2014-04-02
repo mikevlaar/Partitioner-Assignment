@@ -13,7 +13,7 @@ namespace partitionApp
         /**
          * Method to find all partitions for a given number.
          * @param int n partition value
-         * @param int max value to use in partition.
+         * @param int max number to use in partition.
          */ 
         public void partition(int n, int max, String prefix)
         {
