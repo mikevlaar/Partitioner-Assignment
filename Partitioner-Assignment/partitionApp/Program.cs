@@ -35,7 +35,6 @@ namespace partitionApp
                 {
                     if (numValue < Int32.MaxValue)
                     {
-                        //partitioner.printPartitions(numValue, numValue, "");
                         partitioner.partition(numValue, numValue, "");
                         Console.WriteLine("number of lines:" + partitioner.numberOfPartitions);
                     }

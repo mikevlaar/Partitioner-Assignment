@@ -10,6 +10,11 @@ namespace partitionApp
     {
         public int numberOfPartitions = 0;
 
+        /**
+         * Method to find all partitions for a given number.
+         * @param int n partition value
+         * @param int max value to use in partition.
+         */ 
         public void partition(int n, int max, String prefix)
         {
             if (n == 0)
@@ -22,19 +27,6 @@ namespace partitionApp
             for (int i = Math.Min(n,max); i >= 1; i--)
             {
                 partition(n - i, i, prefix + " " + i);
-            }
-        }
-
-        public void printPartitions(int target, int max, String suffix)
-        {
-            if (target == 0)
-               Console.WriteLine(suffix);
-            else
-            {
-                for (int i = 1; i <= max && i <= target; i++)
-                {
-                    printPartitions(target - i, i, i + " " + suffix);
-                }
             }
         }
     }
